@@ -1,0 +1,6 @@
+com\mycompany\App.class
+modelo\Veiculo.class
+com\mycompany\PrimaryController.class
+dao\Dao.class
+com\mycompany\SecondaryController.class
+modelo\Usuario.class
