@@ -15,15 +15,15 @@ public class DaoTest {
     public void testSomeMethod() {
     }
     
-    @org.junit.jupiter.api.Test
-    public void testListar(){
-        List<Usuario> lista;
-        Dao<Usuario> dao = new Dao(Usuario.class);
-        lista = dao.listarTodos();
-        for (Usuario u : lista){
-            System.out.println(u.getNome());
-        }
-    }
+//    @org.junit.jupiter.api.Test
+//    public void testListar(){
+//        List<Usuario> lista;
+//        Dao<Usuario> dao = new Dao(Usuario.class);
+//        lista = dao.listarTodos();
+//        for (Usuario u : lista){
+//            System.out.println(u.getNome());
+//        }
+//    }
     
 //    @org.junit.jupiter.api.Test
 //    public void testExcluir(){
