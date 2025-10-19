@@ -10,11 +10,11 @@ public class Usuario {
         senha = "";
         login = "";
     }
-
-    public Usuario(String nome, String senha, String codigo) {
+    
+    public Usuario(String nome, String senha, String login) {
         this.nome = nome;
         this.senha = senha;
-        this.login = codigo;
+        this.login = login;
     }
 
     public String getNome() {
@@ -33,13 +33,11 @@ public class Usuario {
         this.senha = senha;
     }
 
-    public String getCodigo() {
+    public String getLogin() {
         return login;
     }
 
-    public void setCodigo(String codigo) {
-        this.login = codigo;
+    public void setLogin(String login) {
+        this.login = login;
     }
-    
-    
 }
