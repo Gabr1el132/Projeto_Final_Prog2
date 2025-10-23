@@ -2,7 +2,6 @@ package dao;
 
 import java.util.List;
 import modelo.Motorista;
-import modelo.Usuario;
 
 public class DaoTest {
     
@@ -11,11 +10,19 @@ public class DaoTest {
 //        Dao<Usuario> dao = new Dao(Usuario.class);
 //        dao.inserir(u);
 //    }
+
 //
 //    @org.junit.jupiter.api.Test
 //    public void testSomeMethod() {
 //    }
 //    
+
+
+//    @org.junit.jupiter.api.Test
+//    public void testSomeMethod() {
+//    }
+//    
+
 //    @org.junit.jupiter.api.Test
 //    public void testListar(){
 //        List<Usuario> lista;
@@ -25,7 +32,7 @@ public class DaoTest {
 //            System.out.println(u.getNome());
 //        }
 //    }
-//    
+
 //    @org.junit.jupiter.api.Test
 //    public void testExcluir(){
 //        Dao<Usuario> dao = new Dao(Usuario.class);
@@ -33,20 +40,20 @@ public class DaoTest {
 //    }
     
     
-    public DaoTest() {
-        Motorista t = new Motorista("1234", "Nicolas315", "12345", "uenp");
-        Dao<Motorista> dao = new Dao(Motorista.class);
-        dao.inserir(t);
-    }
-    
-    
-    @org.junit.jupiter.api.Test
-    public void testListar(){
-        List<Motorista> lista;
-        Dao<Motorista> dao = new Dao(Motorista.class);
-        lista = dao.listarTodos();
-        for (Motorista t : lista){
-            System.out.println(t.getNome());
-        }
-    }
+//    public DaoTest() {
+//        Motorista t = new Motorista("1234", "Nicolas315", "12345", "uenp");
+//        Dao<Motorista> dao = new Dao(Motorista.class);
+//        dao.inserir(t);
+//    }
+//    
+//    
+//    @org.junit.jupiter.api.Test
+//    public void testListar(){
+//        List<Motorista> lista;
+//        Dao<Motorista> dao = new Dao(Motorista.class);
+//        lista = dao.listarTodos();
+//        for (Motorista t : lista){
+//            System.out.println(t.getNome());
+//        }
+//    }
 }

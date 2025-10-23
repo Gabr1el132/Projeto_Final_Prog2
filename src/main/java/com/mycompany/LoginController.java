@@ -7,8 +7,10 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.paint.Color;
 import modelo.Usuario;
+import validacao.IValidaClasse;
+import validacao.IVoltaClasse;
 
-public class LoginController {
+public class LoginController implements IValidaClasse, IVoltaClasse{
     @FXML
     private TextField campologin;
     
@@ -24,11 +26,11 @@ public class LoginController {
     }
     
     @FXML
-    private void entrar(){
+    private void entrar() throws IOException{
         String login = campologin.getText();
         String senha = camposenha.getText();
         
-        if (login.isEmpty()||senha.isEmpty()){
+        if (!validar()){
             mostrarMensagem("Preencha login e senha!", Color.RED);
             return;
         }
@@ -42,15 +44,22 @@ public class LoginController {
         }
         
         if (usuario.getSenha().equals(senha)){
-            //App.setRoot("telafuncionalidades");
+            App.setRoot("telafinalidades");
         }
         else{
             mostrarMensagem("Senha incorreta!", Color.RED);
         }
     }
     
+    @Override
+    public boolean validar() {
+        return !campologin.getText().isEmpty() && 
+               !camposenha.getText().isEmpty();
+    }
+    
+    @Override
     @FXML
-    private void voltar() throws IOException{
+    public void voltar() throws IOException{
         App.setRoot("telacontroledefrota");
     }
     

@@ -2,9 +2,14 @@ com\mycompany\PrimaryController.class
 com\mycompany\FrotaController.class
 com\mycompany\SecondaryController.class
 com\mycompany\UsuarioController.class
+validacao\IVoltaClasse.class
+validacao\IValidaClasse.class
 com\mycompany\App.class
 modelo\Veiculo.class
+validacao\ILimpaClasse.class
 dao\Dao.class
 com\mycompany\LoginController.class
+com\mycompany\MotoristaController.class
+com\mycompany\FinalidadesController.class
 modelo\Usuario.class
 modelo\Motorista.class

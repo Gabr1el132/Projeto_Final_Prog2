@@ -7,8 +7,11 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.paint.Color;
 import modelo.Usuario;
+import validacao.ILimpaClasse;
+import validacao.IValidaClasse;
+import validacao.IVoltaClasse;
 
-public class UsuarioController {        
+public class UsuarioController implements IValidaClasse, ILimpaClasse, IVoltaClasse{        
     @FXML
     private TextField campologin;
     
@@ -33,7 +36,7 @@ public class UsuarioController {
         
         labelMensagem.setText("");
             
-        if(campologin.getText().isEmpty()||camponome.getText().isEmpty()||camposenha.getText().isEmpty()){
+        if(!validar()){
             mostrarMensagem("Todos os campos devem ser preenchidos!", Color.RED);
             return;
         }
@@ -53,12 +56,21 @@ public class UsuarioController {
         mostrarMensagem("  Usuário registrado com sucesso!", Color.GREEN);
     }
     
+    @Override
+    public boolean validar() {
+        return !campologin.getText().isEmpty() && 
+               !camponome.getText().isEmpty() && 
+               !camposenha.getText().isEmpty();
+    }
+    
+    @Override
     @FXML
-    private void voltar() throws IOException{
+    public void voltar() throws IOException{
         App.setRoot("telacontroledefrota");
     }
     
-    private void limparCampos(){
+    @Override
+    public void limparCampos(){
         campologin.clear();
         camponome.clear();
         camposenha.clear();

@@ -12,20 +12,12 @@ public class Motorista {
         cnh = "";
         setor = "";
     }
-    
-    public Motorista(String codigo, String nome, String cnh, String setor) {
-        this.codigo = codigo;
+
+    public Motorista(String nome, String cnh, String codigo, String setor) {
         this.nome = nome;
         this.cnh = cnh;
-        this.setor = setor;
-    }
-
-    public String getCodigo() {
-        return codigo;
-    }
-
-    public void setCodigo(String codigo) {
         this.codigo = codigo;
+        this.setor = setor;
     }
 
     public String getNome() {
@@ -42,6 +34,14 @@ public class Motorista {
 
     public void setCnh(String cnh) {
         this.cnh = cnh;
+    }
+
+    public String getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(String codigo) {
+        this.codigo = codigo;
     }
 
     public String getSetor() {
