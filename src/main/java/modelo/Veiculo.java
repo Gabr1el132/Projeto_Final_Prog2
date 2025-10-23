@@ -1,28 +1,28 @@
 package modelo;
 
 public class Veiculo {
-    private String placa;
+    private String emplacamento;
     private String marca;
     private String modelo;
 
     public Veiculo(){
-        placa = "";
+        emplacamento = "";
         marca = "";
         modelo = "";
     }
     
-    public Veiculo(String placa, String marca, String modelo) {
-        this.placa = placa;
+    public Veiculo(String emplacamento, String marca, String modelo) {
+        this.emplacamento = emplacamento;
         this.marca = marca;
         this.modelo = modelo;
     }
 
-    public String getPlaca() {
-        return placa;
+    public String getEmplacamento() {
+        return emplacamento;
     }
 
-    public void setPlaca(String placa) {
-        this.placa = placa;
+    public void setEmplacamento(String emplacamento) {
+        this.emplacamento = emplacamento;
     }
 
     public String getMarca() {
