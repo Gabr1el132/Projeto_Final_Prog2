@@ -11,6 +11,11 @@ public class FinalidadesController implements IVoltaClasse{
     }
     
     @FXML
+    private void registrarVeiculo() throws IOException{
+        App.setRoot("telaregistrarveiculo");
+    }
+    
+    @FXML
     private void registrarRetirada() throws IOException{
         App.setRoot("telaregistrarretirada");
     }

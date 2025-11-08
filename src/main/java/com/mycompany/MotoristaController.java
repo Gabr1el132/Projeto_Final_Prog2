@@ -8,10 +8,11 @@ import javafx.scene.control.TextField;
 import javafx.scene.paint.Color;
 import modelo.Motorista;
 import validacao.ILimpaClasse;
+import validacao.IMostraMensagem;
 import validacao.IValidaClasse;
 import validacao.IVoltaClasse;
 
-public class MotoristaController implements IValidaClasse, ILimpaClasse, IVoltaClasse{
+public class MotoristaController implements IValidaClasse, ILimpaClasse, IVoltaClasse, IMostraMensagem{
     @FXML
     private TextField campocodigo;
     
@@ -74,7 +75,8 @@ public class MotoristaController implements IValidaClasse, ILimpaClasse, IVoltaC
         camposetor.clear();
     }
     
-    private void mostrarMensagem(String mensagem, Color cor){
+    @Override
+    public void mostrarMensagem(String mensagem, Color cor){
         labelMensagem.setText(mensagem);
         labelMensagem.setTextFill(cor);
     }

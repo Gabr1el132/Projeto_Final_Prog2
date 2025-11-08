@@ -8,10 +8,11 @@ import javafx.scene.control.TextField;
 import javafx.scene.paint.Color;
 import modelo.Usuario;
 import validacao.ILimpaClasse;
+import validacao.IMostraMensagem;
 import validacao.IValidaClasse;
 import validacao.IVoltaClasse;
 
-public class UsuarioController implements IValidaClasse, ILimpaClasse, IVoltaClasse{        
+public class UsuarioController implements IValidaClasse, ILimpaClasse, IVoltaClasse, IMostraMensagem{        
     @FXML
     private TextField campologin;
     
@@ -64,20 +65,21 @@ public class UsuarioController implements IValidaClasse, ILimpaClasse, IVoltaCla
     }
     
     @Override
-    @FXML
-    public void voltar() throws IOException{
-        App.setRoot("telacontroledefrota");
-    }
-    
-    @Override
     public void limparCampos(){
         campologin.clear();
         camponome.clear();
         camposenha.clear();
     }
     
-    private void mostrarMensagem(String mensagem, Color cor){
+    @Override
+    public void mostrarMensagem(String mensagem, Color cor){
         labelMensagem.setText(mensagem);
         labelMensagem.setTextFill(cor);
+    }
+    
+    @Override
+    @FXML
+    public void voltar() throws IOException{
+        App.setRoot("telacontroledefrota");
     }
 }

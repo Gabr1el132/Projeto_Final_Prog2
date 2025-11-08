@@ -12,7 +12,7 @@
             <Font size="28.0" />
          </font>
       </Text>
-      <Button layoutX="212.0" layoutY="115.0" mnemonicParsing="false" onAction="#registrarMotorista" text="Registrar Motorista">
+      <Button layoutX="213.0" layoutY="89.0" mnemonicParsing="false" onAction="#registrarMotorista" text="Registrar Motorista">
          <font>
             <Font size="18.0" />
          </font>
@@ -23,6 +23,11 @@
          </font>
       </Button>
       <Button layoutX="264.0" layoutY="282.0" mnemonicParsing="false" onAction="#voltar" text="Voltar">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="223.0" layoutY="145.0" mnemonicParsing="false" onAction="#registrarVeiculo" text="Registrar Veículo">
          <font>
             <Font size="18.0" />
          </font>

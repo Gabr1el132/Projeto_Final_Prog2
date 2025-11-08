@@ -7,10 +7,11 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.paint.Color;
 import modelo.Usuario;
+import validacao.IMostraMensagem;
 import validacao.IValidaClasse;
 import validacao.IVoltaClasse;
 
-public class LoginController implements IValidaClasse, IVoltaClasse{
+public class LoginController implements IValidaClasse, IVoltaClasse, IMostraMensagem{
     @FXML
     private TextField campologin;
     
@@ -63,7 +64,8 @@ public class LoginController implements IValidaClasse, IVoltaClasse{
         App.setRoot("telacontroledefrota");
     }
     
-    private void mostrarMensagem(String mensagem, Color cor){
+    @Override
+    public void mostrarMensagem(String mensagem, Color cor){
     labelMensagem.setText(mensagem);
     labelMensagem.setTextFill(cor);
     }
