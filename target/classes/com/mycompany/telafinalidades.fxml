@@ -12,22 +12,32 @@
             <Font size="28.0" />
          </font>
       </Text>
-      <Button layoutX="213.0" layoutY="89.0" mnemonicParsing="false" onAction="#registrarMotorista" text="Registrar Motorista">
+      <Button layoutX="208.0" layoutY="76.0" mnemonicParsing="false" onAction="#registrarMotorista" prefHeight="39.0" prefWidth="184.0" text="Registrar Motorista">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Button layoutX="218.0" layoutY="200.0" mnemonicParsing="false" onAction="#registrarRetirada" text="Registrar Retirada">
+      <Button layoutX="209.0" layoutY="168.0" mnemonicParsing="false" onAction="#registrarRetirada" prefHeight="39.0" prefWidth="184.0" text="Registrar Retirada">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Button layoutX="264.0" layoutY="282.0" mnemonicParsing="false" onAction="#voltar" text="Voltar">
+      <Button layoutX="264.0" layoutY="347.0" mnemonicParsing="false" onAction="#voltar" text="Voltar">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Button layoutX="223.0" layoutY="145.0" mnemonicParsing="false" onAction="#registrarVeiculo" text="Registrar Veículo">
+      <Button layoutX="208.0" layoutY="122.0" mnemonicParsing="false" onAction="#registrarVeiculo" prefHeight="39.0" prefWidth="184.0" text="Registrar Veículo">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="209.0" layoutY="214.0" mnemonicParsing="false" onAction="#registrarDevolucao" text="Registrar Devolução">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="209.0" layoutY="260.0" mnemonicParsing="false" onAction="#listarRetiradas" prefHeight="39.0" prefWidth="184.0" text="Listar Retiradas">
          <font>
             <Font size="18.0" />
          </font>

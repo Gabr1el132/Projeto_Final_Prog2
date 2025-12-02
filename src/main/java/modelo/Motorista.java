@@ -51,4 +51,9 @@ public class Motorista {
     public void setSetor(String setor) {
         this.setor = setor;
     }
+    
+    @Override
+    public String toString() {
+        return nome + " (" + codigo + ")";
+    }
 }

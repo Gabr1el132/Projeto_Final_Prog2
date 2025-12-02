@@ -20,6 +20,16 @@ public class FinalidadesController implements IVoltaClasse{
         App.setRoot("telaregistrarretirada");
     }
     
+    @FXML
+    private void registrarDevolucao() throws IOException{
+        App.setRoot("telaregistrardevolucao");
+    }
+    
+    @FXML
+    private void listarRetiradas() throws IOException{
+        App.setRoot("telalistaretiradas");
+    }
+    
     @Override
     @FXML
     public void voltar() throws IOException{

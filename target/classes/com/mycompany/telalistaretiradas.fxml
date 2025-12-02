@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane prefHeight="700.0" prefWidth="1200.0" 
+            xmlns="http://javafx.com/javafx/23.0.1" 
+            xmlns:fx="http://javafx.com/fxml/1" 
+            fx:controller="com.mycompany.ListaRetiradasController">
+   
+   <!-- TOP: Título -->
+   <top>
+      <VBox alignment="CENTER" spacing="10" BorderPane.alignment="CENTER">
+         <padding>
+            <Insets top="20" right="20" left="20"/>
+         </padding>
+         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lista de Retiradas" textAlignment="CENTER">
+            <font>
+               <Font size="28.0" />
+            </font>
+         </Text>
+         <Label fx:id="labelMensagem" prefHeight="20.0" />
+      </VBox>
+   </top>
+   
+   <!-- CENTER: Tabela (ocupa todo o espaço central) -->
+   <center>
+      <TableView fx:id="tabelaRetiradas" BorderPane.alignment="CENTER">
+         <columns>
+            <!-- Colunas do Motorista -->
+            <TableColumn fx:id="colunaMotoristaNome" prefWidth="150.0" text="Nome do Motorista" />
+            <TableColumn fx:id="colunaMotoristaCodigo" prefWidth="100.0" text="Código" />
+            <TableColumn fx:id="colunaMotoristaCNH" prefWidth="120.0" text="CNH" />
+            <TableColumn fx:id="colunaMotoristaSetor" prefWidth="120.0" text="Setor" />
+            
+            <!-- Colunas do Veículo -->
+            <TableColumn fx:id="colunaVeiculoEmplacamento" prefWidth="120.0" text="Emplacamento" />
+            <TableColumn fx:id="colunaVeiculoMarca" prefWidth="120.0" text="Marca" />
+            <TableColumn fx:id="colunaVeiculoModelo" prefWidth="120.0" text="Modelo" />
+            
+            <!-- Colunas da Retirada -->
+            <TableColumn fx:id="colunaDataRetirada" prefWidth="120.0" text="Data Retirada" />
+            <TableColumn fx:id="colunaDataDevolucao" prefWidth="120.0" text="Data Devolução" />
+            <TableColumn fx:id="colunaStatus" prefWidth="100.0" text="Status" />
+         </columns>
+         <BorderPane.margin>
+            <Insets top="10" right="20" bottom="10" left="20"/>
+         </BorderPane.margin>
+      </TableView>
+   </center>
+   
+   <!-- BOTTOM: Botões -->
+   <bottom>
+      <HBox alignment="CENTER_RIGHT" spacing="20" BorderPane.alignment="CENTER">
+         <padding>
+            <Insets top="10" right="20" bottom="20" left="20"/>
+         </padding>
+         <Button fx:id="botaoAtualizar" mnemonicParsing="false" 
+                 onAction="#atualizarLista" text="Atualizar Lista">
+            <font>
+               <Font size="14.0" />
+            </font>
+         </Button>
+         <Button mnemonicParsing="false" onAction="#voltar" text="Voltar">
+            <font>
+               <Font size="14.0" />
+            </font>
+         </Button>
+      </HBox>
+   </bottom>
+</BorderPane>
